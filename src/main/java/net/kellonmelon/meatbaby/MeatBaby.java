@@ -1,6 +1,7 @@
 package net.kellonmelon.meatbaby;
 
 import com.mojang.logging.LogUtils;
+import net.kellonmelon.meatbaby.block.ModBlocks;
 import net.kellonmelon.meatbaby.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,7 @@ public class MeatBaby
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

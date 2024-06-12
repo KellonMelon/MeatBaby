@@ -1,4 +1,10 @@
 {
   "item.meatbaby.cookedmeatbaby": "Cooked Meat Baby",
-  "item.meatbaby.meatbaby": "Meat Baby"
+  "item.meatbaby.meatbaby": "Meat Baby",
+  "item.meatbaby.cookedmeatchunk": "Cooked Meat Chunk",
+  "item.meatbaby.meatchunk": "Meat Chunk",
+
+  "block.meatbaby.meatblock": "Meat Block",
+
+  "itemGroup.MeatBaby": "Meat Baby"
 }

@@ -13,11 +13,16 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MeatBaby.MOD_ID);
 
     public static final RegistryObject<Item> COOKEDMEATBABY = ITEMS.register("cookedmeatbaby",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MEATBABY_TAB)));
 
     public static final RegistryObject<Item> MEATBABY = ITEMS.register("meatbaby",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MEATBABY_TAB)));
 
+    public static final RegistryObject<Item> COOKEDMEATCHUNK = ITEMS.register("cookedmeatchunk",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MEATBABY_TAB)));
+
+    public static final RegistryObject<Item> MEATCHUNK = ITEMS.register("meatchunk",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MEATBABY_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
