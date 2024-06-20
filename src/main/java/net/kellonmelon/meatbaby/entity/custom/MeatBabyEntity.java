@@ -111,8 +111,9 @@ public class MeatBabyEntity extends Monster implements IAnimatable {
 
 
 
-    public static AttributeSupplier.Builder setAttributes() {
-        return Mob.createMobAttributes().add(ForgeMod.ENTITY_GRAVITY.get(), 0.08D)
+    public static AttributeSupplier.Builder createMobAttributes() {
+        return Mob.createMobAttributes()
+                .add(ForgeMod.ENTITY_GRAVITY.get(), 0.08D)
                 .add(Attributes.MAX_HEALTH, 10.0D)
                 .add(Attributes.MOVEMENT_SPEED,0.25D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0D)

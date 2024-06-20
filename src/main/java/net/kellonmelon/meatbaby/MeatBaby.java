@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -59,16 +60,17 @@ public class MeatBaby
         GeckoLib.initialize();
         ModEntityTypes.register(modEventBus);
 
+
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
-        MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        LOGGER.info("MeatBaby setup");
     }
 
 
@@ -102,12 +104,13 @@ public class MeatBaby
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntityTypes.MEATBABY.get(), MeatBabyRenderer::new);
         }
     }
+
+
+
 }
