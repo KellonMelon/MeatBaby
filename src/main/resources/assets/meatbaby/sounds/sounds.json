@@ -1,0 +1,9 @@
+{
+  "mob.meatbaby.death": {
+    "category": "neutral",
+    "sounds":
+            [
+              "snap"
+            ]
+  }
+}

@@ -5,6 +5,11 @@
   "item.meatbaby.meatchunk": "Meat Chunk",
 
   "block.meatbaby.meatblock": "Meat Block",
+  "block.meatbaby.cookedmeatblock": "Cooked Meat Block",
 
-  "itemGroup.MeatBaby": "Meat Baby"
+  "itemGroup.MeatBaby": "Meat Baby",
+
+  "entity.meatbaby.meatbabyentity": "Meat Baby",
+
+  "item.meatbaby.meatbabyspawnegg": "Meat Baby Spawn Egg"
 }

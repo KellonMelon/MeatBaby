@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X",
+    "YZ"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cooked_beef"
+    },
+    "X": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "Y": {
+      "item": "minecraft:cooked_porkchop"
+    },
+    "Z": {
+      "item": "minecraft:cooked_mutton"
+    }
+  },
+  "result": {
+    "item": "meatbaby:cookedmeatblock"
+  }
+}

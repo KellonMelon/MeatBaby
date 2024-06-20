@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X",
+    "YZ"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:beef"
+    },
+    "X": {
+      "item": "minecraft:chicken"
+    },
+    "Y": {
+      "item": "minecraft:porkchop"
+    },
+    "Z": {
+      "item": "minecraft:mutton"
+    }
+  },
+  "result": {
+    "item": "meatbaby:meatblock"
+  }
+}

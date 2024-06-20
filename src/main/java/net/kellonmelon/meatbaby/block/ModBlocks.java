@@ -7,6 +7,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,7 +22,18 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, MeatBaby.MOD_ID);
 
     public static final RegistryObject<Block> MEAT_BLOCK = registerBlock("meatblock",
-            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(6f)), ModCreativeModeTab.MEATBABY_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5f)
+                    .sound(SoundType.SLIME_BLOCK)),
+                    //.requiresCorrectToolForDrops()),
+            ModCreativeModeTab.MEATBABY_TAB);
+
+    public static final RegistryObject<Block> COOKED_MEAT_BLOCK = registerBlock("cookedmeatblock",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5f)
+                    .sound(SoundType.CORAL_BLOCK)),
+            //.requiresCorrectToolForDrops()),
+            ModCreativeModeTab.MEATBABY_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
